@@ -812,7 +812,7 @@ void setup() {
   if (fmsi) radio.setFMSI(2); else radio.setFMSI(1);
   LowLevelInit = true;
 
-  if (ConverterSet >= 200) {
+  if (ConverterSet >= 200) {          // David
     Wire.beginTransmission(0x12);
     Wire.write(ConverterSet >> 8);
     Wire.write(ConverterSet & (0xFF));
